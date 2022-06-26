@@ -11,6 +11,6 @@
 	{"id":"morbius7","code":"MORBIUS7"},
 	{"id":"rakkirbooty","code":"RAKKIRBOOTY"},
 	{"id":"wide","code":"testwide"},
-	{"id":"overlay","code":"testoverlay", "modifier":null}
+	{"id":"overlay","code":"testoverlay", "modifier":null},
 	{"id":"overlay","code":"testoverlay2", "modifier":"2px 0 0 0"}
 ]
