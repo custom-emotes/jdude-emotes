@@ -1,0 +1,5 @@
+/static/*
+	cache-control: max-age=31536000
+
+/emotes.json
+	cache-control: max-age=3600
