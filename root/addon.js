@@ -21,7 +21,7 @@ class Aplatypuss extends FrankerFaceZ.utilities.addon.Addon {
 		});
 
 		this.chat.context.on('changed:aplatypuss.enable_emoticons', this.updateEmotes, this);
-		
+		this.updateEmotes();
 	}
 
 	onEnable() {
