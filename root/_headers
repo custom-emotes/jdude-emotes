@@ -3,3 +3,6 @@
 
 /emotes.json
 	cache-control: no-cache
+
+/*.js
+	cache-control: max-age=31536000
