@@ -20,8 +20,9 @@
 					},
 				});
 
+				this.log.debug('Aplatypuss Emotes injected Correctly');
 				this.chat.context.on('changed:aplatypuss.enable_emoticons', this.updateEmotes, this);
-				this.updateEmotes();
+				this.onEnable();
 			}
 
 			onEnable() {
