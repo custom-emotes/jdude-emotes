@@ -16,5 +16,6 @@
 	{"id":"platycart","code":"platyCART"},
 	{"id":"eyesshaking","code":"EYESSHAKING"},
 	{"id":"superwide","code":"WIDE"},
-	{"id":"platyblind","code":"platyBLIND"}
+	{"id":"platyblind","code":"platyBLIND"},
+	{"id":"starewide","code":"WIDESTARE"}
 ]
