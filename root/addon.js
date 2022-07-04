@@ -74,10 +74,12 @@
 							modifier_offset: dataEmote.modifier,
 						};
 
+						const filetype = (dataEmote.type === undefined ? "webp" : dataEmote.type); 
+
 						emote.urls = {
-							1: BASE_URL + `${dataEmote.id}` + "_28.webp",
-							2: BASE_URL + `${dataEmote.id}` + "_56.webp",
-							4: BASE_URL + `${dataEmote.id}` + "_112.webp",
+							1: BASE_URL + `${dataEmote.id}` + "_28." + `${dataEmote.type}`,
+							2: BASE_URL + `${dataEmote.id}` + "_56." + `${dataEmote.type}`,
+							4: BASE_URL + `${dataEmote.id}` + "_112." + `${dataEmote.type}`,
 						};
 
 
