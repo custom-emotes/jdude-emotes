@@ -1,7 +1,7 @@
 'use strict';
 (() => {
 	function main_init() {
-		class Aplatypuss extends FrankerFaceZ.utilities.addon.Addon {
+		class JDude extends FrankerFaceZ.utilities.addon.Addon {
 			constructor(...args) {
 				super(...args);
 
@@ -9,24 +9,24 @@
 				this.inject('chat');
 				this.inject('chat.emotes');
 
-				this.settings.add('aplatypuss.enable_emoticons', {
+				this.settings.add('jdude.enable_emoticons', {
 					default: true,
 
 					ui: {
-						path: 'Add-Ons > APlatypuss >> Emotes',
+						path: 'Add-Ons > JDude >> Emotes',
 						title: 'Show Emotes',
-						description: 'Enable to show APlatypuss emotes.',
+						description: 'Enable to show JDude emotes.',
 						component: 'setting-check-box',
 					},
 				});
 
-				this.log.debug('Aplatypuss Emotes injected Correctly');
-				this.chat.context.on('changed:aplatypuss.enable_emoticons', this.updateEmotes, this);
+				this.log.debug('JDude Emotes injected Correctly');
+				this.chat.context.on('changed:jdude.enable_emoticons', this.updateEmotes, this);
 				this.onEnable();
 			}
 
 			onEnable() {
-				this.log.debug('Aplatypuss Emotes module was enabled successfully.');
+				this.log.debug('JDude Emotes module was enabled successfully.');
 
 				this.on('chat:room-add', this.roomAdd);
 				this.on('chat:room-remove', this.roomRemove);
@@ -44,16 +44,16 @@
 			}
 
 			async updateChannelEmotes(room, attempts = 0) {
-				const realID = 'addon--aplatypuss--emotes';
-				room.removeSet('addon--aplatypuss', realID);
+				const realID = 'addon--jdude--emotes';
+				room.removeSet('addon--jdude', realID);
 				//this.emotes.unloadSet(realID);
 
-				if (!this.chat.context.get('aplatypuss.enable_emoticons')) {
+				if (!this.chat.context.get('jdude.enable_emoticons')) {
 					return;
 				}
 
-				const BASE_URL = "https://aplatypuss-emotes.pages.dev/static/"
-				const response = await fetch('https://aplatypuss-emotes.pages.dev/emotes.json');
+				const BASE_URL = "https://jdude-emotes.pages.dev/static/"
+				const response = await fetch('https://jdude-emotes.pages.dev/emotes.json');
 				if (response.ok) {
 					const platyEmotes = [];
 
@@ -91,10 +91,10 @@
 					let set = {
 						emoticons: setEmotes,
 						title: 'Channel Emotes',
-						source: 'Aplatypuss',
-						icon: 'https://aplatypuss-emotes.pages.dev/static/icon.png',
+						source: 'JDude',
+						icon: 'https://jdude-emotes.pages.dev/static/icon.png',
 					};
-					room.addSet('addon--aplatypuss', realID, set);
+					room.addSet('addon--jdude', realID, set);
 
 				} else {
 					if (response.status === 404) return;
@@ -108,17 +108,17 @@
 			}
 
 			async updateChannel(room) {
-				const realID = 'addon--aplatypuss--emotes';
+				const realID = 'addon--jdude--emotes';
 
 				//console.log(room);
-				if (room._id != 39464264) { //Platy Twitch ID
-					//console.log("disabling Aplatypuss emotes")
-					this.emotes.unloadSet('addon--aplatypuss', realID);
+				if (room._id != 25118940) { //JDude Twitch ID
+					//console.log("disabling JDude emotes")
+					this.emotes.unloadSet('addon--jdude', realID);
 				}
 				else {
-					//console.log("Aplatypuss emotes enabled")
+					//console.log("JDude emotes enabled")
 					this.updateChannelEmotes(room);
-					this.emotes.loadSet('addon--aplatypuss', realID);
+					this.emotes.loadSet('addon--jdude', realID);
 
 				}
 
@@ -131,7 +131,7 @@
 			}
 		}
 
-		Aplatypuss.register();
+		JDude.register();
 	}
 
 	function checkExistance(attempts) {

@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name Userscript loader for Emotes Add-On
+// @name Userscript loader for JDude Emotes Add-On
 // @version 1.0
-// @author nznzaza
+// @author nznaza
 // @description Injects Emotes Addon as user-script
 // @match *://*.twitch.tv/*
 // @run-at document-start
@@ -11,6 +11,6 @@
 
     script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://jdude-emotes.pages.dev//addon.js';
+    script.src = 'https://jdude-emotes.pages.dev/addon.js';
     document.documentElement.appendChild(script);
 })();
