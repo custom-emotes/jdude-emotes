@@ -11,6 +11,6 @@
 
     script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://aplatypuss-emotes.pages.dev/addon.js';
+    script.src = 'https://jdude-emotes.pages.dev/addon.js';
     document.documentElement.appendChild(script);
 })();
